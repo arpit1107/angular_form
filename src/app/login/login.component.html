@@ -1,0 +1,23 @@
+<form>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="Email" class="form-control" name="email" id="email" 
+    [(ngModel)]="login_data.email" required #namefield="ngModel">
+    <div [hidden]="namefield.valid || namefield.untouched" class="alert alert-danger">
+      Enter the Email
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" class="form-control" 
+    [(ngModel)]="login_data.password" required #namefield1="ngModel">
+    <div [hidden]="namefield1.valid || namefield1.untouched" class="alert alert-danger">
+      Enter the Password
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-primary button" type="submit" disabled>Login</button>
+    </div>
+  </div>
+</form>

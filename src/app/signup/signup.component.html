@@ -1,0 +1,31 @@
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="signup_data.name" 
+    required #namefield="ngModel">
+    <div [hidden]="namefield.valid || namefield.untouched" class="alert alert-danger">
+      Enter the name
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="Email" class="form-control" name="email" id="email" [(ngModel)]="signup_data.email" 
+    required #namefield1="ngModel">
+    <div [hidden]="namefield1.valid || namefield1.untouched" class="alert alert-danger">
+      Enter the email
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" class="form-control" [(ngModel)]="signup_data.password" 
+    required #namefield2="ngModel">
+    <div [hidden]="namefield2.valid || namefield2.untouched" class="alert alert-danger">
+      Enter the password
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-primary button" type="submit" disabled>SignUp</button>
+    </div>
+  </div>
+</form>
